@@ -1,0 +1,17 @@
+:root {
+  font-size: 62.5%;
+
+  /* fontes */
+  --ff-fonte-1: 'Palanquin', sans-serif;
+  --ff-fonte-2: 'Staatliches', cursive;
+  --fs-body: 2rem;
+  --fs-h1: 4rem;
+
+  /*paletas de cores */
+  --bg-logo: hsla(218, 17%, 62%);
+  --bg-h1: hsla(275, 18%, 79%);
+  --bg-page: hsla(233, 100%, 97%);
+  --bg-texto-img: hsla(312, 91%, 96%);
+  --fc-texto: hsla(232, 17%, 35%);
+  --fc-h1: hsla(0, 0%, 100%);
+}

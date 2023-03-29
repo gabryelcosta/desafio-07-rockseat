@@ -1,0 +1,152 @@
+@import url(reset.css);
+@import url(root.css);
+
+body {
+  font-family: var(--ff-fonte-2);
+  font-size: var(--fs-body);
+
+  background: var(--bg-page);
+}
+
+.cabecalho {
+  text-align: center;
+  width: 100%;
+}
+
+header {
+  height: 30rem;
+  background: var(--bg-logo);
+}
+
+header img {
+  width: 16rem;
+  height: 16rem;
+  margin: 3.2rem 0;
+}
+
+header h1 {
+  font-size: var(--fs-h1);
+  text-align: center;
+  color: var(--fc-h1);
+  line-height: 3.4rem;
+
+  padding: 0.8rem 0;
+
+  background: var(--bg-h1);
+}
+
+.page {
+  max-width: clamp(50rem, 20rem + 60vw, 117rem);
+  margin: 0 auto;
+}
+
+main p {
+  font-family: var(--ff-fonte-1);
+  line-height: 1.5rem;
+  color: var(--fc-texto);
+  text-align: center;
+
+  margin: 1.4rem 0 6.2rem;
+}
+
+.container {
+  display: grid;
+  gap: 3.2rem;
+
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.card {
+  position: relative;
+
+}
+
+.card img {
+  width: 32rem;
+  object-fit: cover;
+
+  border-radius: 20px;
+
+  animation: uptop 1000ms 500ms forwards;
+}
+
+.card h2 {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+
+  padding: 0.1rem 2rem;
+  color: var(--fc-texto);
+
+  height: 3.5rem;
+  background: var(--bg-texto-img);
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+
+  animation: down 1000ms 500ms forwards;
+}
+
+@keyframes uptop {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes down {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px)
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 700px) {
+  .page {
+  max-width: 117rem;
+  }
+
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 900px) {
+  .container {
+    align-items: center;
+    grid-template-areas: "A A B"
+    "C C D";
+  }
+
+  .container div:nth-child(1)
+  {
+    grid-area: A;
+  }
+
+  .container div:nth-child(2)
+  {
+    grid-area: B;
+  }
+
+  .container div:nth-child(3)
+  {
+    grid-area: C;
+  }
+
+  .container div:nth-child(4)
+  {
+    grid-area: D;
+  }
+}
